@@ -1,0 +1,34 @@
+<div class="modal" id="modal-crear">
+    <div class="modal-content" style="border: 2px solid #1a73e8;">
+        <h3 style="margin-top: 0; color: #1a73e8; border-bottom: 2px solid #1a73e8; padding-bottom: 5px;">Agregar Nueva Receta</h3>
+        
+        <form action="javascript:registrarReceta()" enctype="multipart/form-data" method="post" id="form-receta">
+            <div style="margin-bottom: 10px;">
+                <label for="titulo" style="display: block; font-weight: bold; margin-bottom: 3px;">Título:</label>
+                <input type="text" name="titulo" id="titulo" required style="width: 95%; padding: 6px; border: 1px solid #ccc; border-radius: 4px;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="idtiporeceta" style="display: block; font-weight: bold; margin-bottom: 3px;">Tipo de la receta:</label>
+                <select name="idtiporeceta" id="idtiporeceta" required style="width: 100%; padding: 6px; border: 1px solid #ccc; border-radius: 4px;">
+                    <!-- Cargado dinámicamente desde tipos_receta.php -->
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="fotografia" style="display: block; font-weight: bold; margin-bottom: 3px;">Imagen:</label>
+                <input type="file" name="fotografia" id="fotografia" required style="width: 100%; padding: 3px;">
+            </div>
+            
+            <div style="margin-bottom: 15px;">
+                <label for="preparacion" style="display: block; font-weight: bold; margin-bottom: 3px;">Preparación:</label>
+                <textarea name="preparacion" id="preparacion" cols="30" rows="4" required style="width: 95%; padding: 6px; border: 1px solid #ccc; border-radius: 4px; font-family: Arial, sans-serif;"></textarea>
+            </div>
+            
+            <div style="text-align: right; border-top: 1px solid #eee; padding-top: 10px; margin-top: 10px;">
+                <button type="button" onclick="cerrarModal()" class="btnMenu" style="width: auto; padding: 8px 15px; background-color: #aaa; margin-right: 5px; margin-bottom: 0;">Cancelar</button>
+                <input type="submit" value="Guardar Receta" class="btnMenu" style="width: auto; padding: 8px 15px; margin-bottom: 0;">
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div>
+    <h3 style="margin-top: 0; color: #1a73e8;">Selector Avanzado de Temas</h3>
+    <p style="font-size: 13px; color: #666; margin-bottom: 15px;">
+        Cambie el tema predefinido para el menú de la izquierda, o agregue tarjetas de colores personalizadas.
+    </p>
+
+    <div style="background: #fafafa; padding: 15px; border-radius: 6px; border: 1px solid #ddd; margin-bottom: 20px;">
+        <label for="tema" style="font-weight: bold; margin-right: 10px;">Tema Predefinido del Menú:</label>
+        <select name="tema" id="tema" onchange="cambiarTemaMenu(this.value)" style="padding: 6px; border-radius: 4px; border: 1px solid #ccc; width: 150px; margin-right: 20px;">
+            <option value="claro">Claro</option>
+            <option value="oscuro">Oscuro</option>
+            <option value="contraste">Contraste</option>
+            <option value="pastel">Pastel</option>
+        </select>
+
+        <label for="color" style="font-weight: bold; margin-right: 10px;">Color Personalizado:</label>
+        <input type="color" id="color" value="#1a73e8" style="vertical-align: middle; cursor: pointer; margin-right: 10px; width: 40px; height: 30px; border: 1px solid #ccc; padding: 0; border-radius: 4px;">
+        
+        <button id="boton" onclick="aumentar()" class="btnMenu" style="width: auto; padding: 6px 15px; margin-bottom: 0; display: inline-block; vertical-align: middle;">Añadir Color</button>
+    </div>
+
+    <h4>Tarjetas de Colores (Mínimo 4 columnas):</h4>
+    <div id="contenedor-colores">
+        <!-- Las tarjetas se añadirán aquí dinámicamente -->
+    </div>
+</div>
